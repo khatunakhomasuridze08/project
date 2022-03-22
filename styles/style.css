@@ -45,7 +45,9 @@ button {
     align-items: center;
     margin-bottom: 106px;
 }
-
+.sidebar_toggler{
+    cursor: pointer;
+}
 .logo {
     font-family: 'Avenir book';
     font-size: 24px;
@@ -222,7 +224,6 @@ button {
     padding: 15px;
     border-radius: 50%;
     border: 1px solid black;
-
 }
 .upload {
     display: block;
@@ -236,11 +237,12 @@ button {
     border-radius: 12px;
 }
 
-
 .base_container {
     max-width: 1231px;
-    width: 100%;
+    /* width: 100%; */
     margin: 0 auto;
+    box-sizing: content-box;
+    padding: 0 25px;
 }
 
 .design {
@@ -249,6 +251,7 @@ button {
     align-items: center;
     padding: 16px 0 19px;
     margin-bottom: 40px;
+    gap: 20px 0;
 }
 
 .design_menu_list {
@@ -301,7 +304,8 @@ button {
 .app_list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 25px;
 }
 
 .app_list img {
@@ -359,7 +363,6 @@ button {
     background-color: #F2F2F2;
     border-radius: 12px;
     display:inline-block;
-
 }
 
 .desingers_section {
@@ -368,6 +371,7 @@ button {
 
 .desingers_container {
     padding-top: 67px;
+    padding-bottom: 60px;
     background-color: #FAFAFA;
 }
 
@@ -396,13 +400,14 @@ button {
 
 .desingers_list {
     display: flex;
+    gap: 60px 25px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .desingers_item {
     display: flex;
     flex-direction: column;
-    margin-right: 25px;
-    margin-bottom: 60px;
 }
 .desingers_item.active {
     margin-right: 0;
@@ -453,6 +458,7 @@ button {
     grid-template-columns: 25% 25% 25% 25%;
     padding-top: 69px;
     margin-bottom: 72px;
+    gap: 30px 0;
 }
 
 .directories h4 {
@@ -558,7 +564,8 @@ tr:hover td{
 }
 
 
-@media (max-width: 1200px) {
+
+@media (max-width: 1366px) {
     .grid_container {
         grid-template-columns: 280px 1fr;
     }
@@ -620,7 +627,6 @@ tr:hover td{
 
     .header_contant {
         flex-wrap: wrap;
-        flex-direction: row-reverse;
     }
 
     .upload {
@@ -639,7 +645,7 @@ tr:hover td{
     .design {
         flex-direction: column;
         padding: 8px 0 7px;
-        margin-bottom: 20px;
+        margin-bottom: 45px;
     }
 
     .design_link {
@@ -686,7 +692,26 @@ tr:hover td{
     td {
         font-size: 14px;
     }  
+
+    .design_menu_list {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
+
+
+
+@media (max-width: 1200px) {
+    .header_contant {
+        flex-direction: column-reverse;
+        gap: 20px 0;
+    }
+
+    .header_container {
+        padding: 15px 12px 0 12px;
+    }
+}
+
 
 @media (max-width: 768px) {
     .grid_container {
@@ -728,7 +753,7 @@ tr:hover td{
     }
     
     .header_container {
-        padding: 28px 45px 0 12px;
+        padding: 28px 12px 0 12px;
         margin-bottom: 25px;
     }
     .header_contant {
@@ -754,7 +779,7 @@ tr:hover td{
 
     .design {
         padding: 8px 0 7px;
-        margin-bottom: 18px;
+        margin-bottom: 30px;
     } 
 
     .design_menu_list {
@@ -764,8 +789,7 @@ tr:hover td{
         margin-right: 2px;
     }
     .design_link {
-        font-size: 10px;
-        padding: 4px 12px;
+        font-size: 13px;
     }
     .filters {
         padding: 8px 12px;
